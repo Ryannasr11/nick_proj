@@ -66,6 +66,7 @@ router.post('/ingest', async (req, res) => {
   try {
     const { userId, textData } = req.body;
     
+    // edge case checks
     if (!userId || !textData) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
@@ -381,7 +382,7 @@ This implementation ensures that user consent is central to the data processing 
 # Part 4: Bias Check & Mitigation
 
 ## Bias Detection Approach
-- **Detection Methods**: Implement statistical fairness metrics (demographic parity, equalized odds) to compare classification outcomes across demographic groups
+- **Detection Methods**: Implement statistical fairness metrics such as demographic parity to compare classification outcomes across certain demographic groups
 - **Integration Point**: Place bias detection module after PII anonymization but before storage, acting as a quality gate
 - **Key Metrics**: Track disparate impact ratio (using 80% rule threshold), classification rate differences, and counterfactual fairness scores
 

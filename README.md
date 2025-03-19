@@ -13,7 +13,7 @@ The DE.ai microservice follows a privacy-by-design approach with the following d
 5. **Blockchain Logging**: Each transformation event is logged to an immutable blockchain ledger.
 6. **Secure Storage**: Anonymized data is stored securely for further processing.
 
-<iframe src="docs.html" width="100%" height="500" frameborder="0"></iframe>
+![Architecture Diagram](path/to/architecture-diagram.svg)
 
 ### Security & Privacy Measures
 
